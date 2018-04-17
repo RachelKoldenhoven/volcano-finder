@@ -14,7 +14,6 @@ export default class Map extends Component {
 
     loadMap() {
         if (this.props && this.props.google) {
-            // google is available
             const {google} = this.props;
             const maps = google.maps;
             const mapRef = this.refs.map;
