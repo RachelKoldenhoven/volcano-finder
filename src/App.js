@@ -17,7 +17,6 @@ class App extends Component {
                 </header>
                 <p className="App-intro">
                 </p>
-                <Volcanoes/>
                 <MapContainer google={this.props.google}/>
             </div>
         );
