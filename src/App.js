@@ -4,6 +4,9 @@ import './styles/App.css';
 import './styles/normalize.css';
 import './styles/skeleton.css';
 
+import Volcanoes from './Volcanoes';
+import MapContainer from './MapContainer';
+
 class App extends Component {
   render() {
     return (
@@ -14,6 +17,8 @@ class App extends Component {
         </header>
         <p className="App-intro">
         </p>
+          <Volcanoes/>
+          <MapContainer google={this.props.google}/>
       </div>
     );
   }
