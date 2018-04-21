@@ -1,10 +1,8 @@
 import React, {Component} from 'react';
-import logo from './logo.svg';
 import './styles/App.css';
 import './styles/normalize.css';
 import './styles/skeleton.css';
 
-import Volcanoes from './Volcanoes';
 import MapContainer from './MapContainer';
 
 class App extends Component {
@@ -12,12 +10,11 @@ class App extends Component {
         return (
             <div className="App">
                 <header className="App-header">
-                    <img src={logo} className="App-logo" alt="logo"/>
-                    <h1 className="App-title">Welcome to React</h1>
+                    <h1 className="App-title">Welcome to Volcano Finder</h1>
                 </header>
-                <p className="App-intro">
-                </p>
-                <MapContainer google={this.props.google}/>
+                <div className="myContainer">
+                    <MapContainer className="mapContainer" google={this.props.google}/>
+                </div>
             </div>
         );
     }

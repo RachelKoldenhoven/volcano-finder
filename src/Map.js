@@ -4,7 +4,6 @@ import volcanoes from './volcano.json';
 
 
 export default class Map extends Component {
-    locations = [];
 
     componentDidMount() {
         this.loadMap();
@@ -30,7 +29,8 @@ export default class Map extends Component {
             const center = new maps.LatLng(lat, lng);
             const mapConfig = Object.assign({}, {
                 center: center,
-                zoom: zoom
+                zoom: zoom,
+                gestureHandling: 'cooperative'
             });
             this.map = new maps.Map(node, mapConfig);
             volcanoes.forEach(volcano => {
