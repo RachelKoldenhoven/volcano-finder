@@ -4,14 +4,13 @@ import React, {Component} from 'react';
 export default class Address extends Component {
     constructor(props) {
         super(props);
-        this.state = JSON.parse(JSON.stringify(props.location));
+        this.state = {location: JSON.parse(JSON.stringify(props.location))};
     }
 
     changed = (event) => {
-        const newState = {
-            location: event.target.value
-        };
-        this.setState(newState);
+        const value = event.target.value;
+        const name = event.target.name;
+        this.setState({...this.state, [name]: value});
     };
 
     render() {
