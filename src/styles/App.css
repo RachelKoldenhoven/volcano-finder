@@ -31,9 +31,8 @@
 
 .myContainer {
     display: flex;
-    flex-direction: column;
     margin: 0;
-    width: 80%;
+    width: 100%;
     align-content: center;
 }
 
