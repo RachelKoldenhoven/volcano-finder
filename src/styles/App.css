@@ -7,9 +7,13 @@
 
 .App-header {
     width: 100%;
-    background-color: #222;
-    height: 90px;
+    height: 100px;
     color: white;
+    overflow: hidden;
+}
+
+.App-header img {
+    width: 100%;
 }
 
 .App-title {
@@ -39,4 +43,8 @@
 .map {
     width: 80%;
     height: 100%;
+}
+
+.AddressComp {
+    padding: 5px;
 }

@@ -71,9 +71,7 @@ export default class Map extends Component {
                 }
 
                 const displayDistance = Math.round(minDistance / 1000);
-                console.log(displayDistance);
                 const displayName = closestVolcano.Name;
-                console.log(displayName);
                 this.map.setCenter(results[0].geometry.location);
                 this.map.setZoom(6);
                 var marker = new google.maps.Marker({
@@ -81,6 +79,11 @@ export default class Map extends Component {
                     map: this.map,
                     position: results[0].geometry.location
                 });
+                const result = {
+                    volcano: displayName,
+                    distance: displayDistance
+                };
+                this.props.updateResult(result);
             } else {
                 alert("Geocode was not successful for the following reason: " + status);
             }

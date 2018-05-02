@@ -12,7 +12,8 @@ export class MapContainer extends Component {
         return (
             <div style={style}>
                 <Map google={this.props.google}
-                     location={this.props.location}/>
+                     location={this.props.location}
+                     updateResult={this.props.updateResult}/>
             </div>
         )
     }

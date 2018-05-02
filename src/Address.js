@@ -15,8 +15,8 @@ export default class Address extends Component {
 
     render() {
         return (
-            <div>
-                <span>Enter a Location</span>
+            <div className="AddressComp">
+                <span>Enter a Location to Find the Nearest Volcano</span>
                 <input
                     type="text"
                     name="location"
